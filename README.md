@@ -1,5 +1,14 @@
 #Labwork2
-
+#Создание конфигурационного файла
+```bash
+root@LabPythonVM:/home/student/Vladimir1209/workspace# cat > ~/.config/hub <<EOF
+> github.com:
+- user: ${GITHUB_USERNAME}
+  oauth_token: ${GITHUB_TOKEN}
+  protocol: https
+> EOF
+root@LabPythonVM:/home/student/Vladimir1209/workspace# git config --global hub.protocol https
+```
 #Перенос файлов на GitHub
 ```bash
 root@LabPythonVM:/home/student/Vladimir1209/workspace/projects/lab02# git push origin master
